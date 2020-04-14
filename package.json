@@ -1,0 +1,22 @@
+{
+  "name": "user-stats",
+  "version": "1.0.0",
+  "description": "user stats node / react",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "author": "MelNick",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite-sync": "^0.3.9"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
