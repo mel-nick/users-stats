@@ -27,7 +27,7 @@ app.listen(PORT, (req, res) => {
     console.log(`Server is listening on port: ${PORT}`)
 })  
 
-// setting table
+// setting tables
 const usersTable = `
     CREATE TABLE IF NOT EXISTS users(
     user_id INTEGER NOT NULL,
