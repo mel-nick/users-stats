@@ -3,6 +3,7 @@ import axios  from 'axios';
 import Spinner from '../spinner/Spinner'
 // import Moment from 'react-moment'
 import LineChart from 'react-linechart';
+import { Link } from 'react-router-dom'
 import '../../../node_modules/react-linechart/dist/styles.css';
 
 function GraphPage({match}) {
@@ -31,7 +32,6 @@ function GraphPage({match}) {
             points: userClicks 
         }
     ];
-
     const chartDataViews = [
         {									
             color: "green", 
@@ -41,11 +41,25 @@ function GraphPage({match}) {
     return (
         loading ? <Spinner/> : <Fragment>
         <div className="container">
+        <div className="row">
+            <div className="col-12">
+                <div className="breadcrumbs">
+                    <Link to="/">main page</Link>
+                    <span>></span>
+                    <Link to="/users">users stats</Link>
+                    <span>></span>
+                  
+                  {user.user.map((user, i)=>(
+                    <span key={i} className="graph-user-name">{user.first_name} {' '} {user.last_name}</span>
+                ))}
+                </div>
+            </div>
+        </div>
             <div className="row">
                 <div className="col-12">
-                {/* {userData.map((user, i)=>(
+                 {user.user.map((user, i)=>(
                     <h4 key={i} className="graph-user-name">{user.first_name} {' '} {user.last_name}</h4>
-                ))} */}
+                ))}
                 </div>
             </div>
             <div className="row">

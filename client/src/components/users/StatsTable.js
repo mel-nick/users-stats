@@ -3,7 +3,7 @@ import axios from 'axios'
 import UsersList from './UsersList'
 import Pagination from './Pagination'
 import Spinner from '../spinner/Spinner'
-
+import { Link } from 'react-router-dom'
 
 const StatsTable = () => {
 
@@ -32,8 +32,17 @@ const StatsTable = () => {
     return (
         loading ? <Spinner /> : <Fragment>
         <div className="container">
+        <div className="row">
+            <div className="col-12">
+                <div className="breadcrumbs">
+                    <Link to="/">main page</Link>
+                    <span>></span>
+                    <span>users stats</span>
+                </div>
+            </div>
+        </div>
             <div className="row">
-                <div className="col-12">
+                    <div className="col-12">
                     <UsersList 
                         users={currentUsers} 
                         loading={loading} 

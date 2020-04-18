@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="row">
-                <div className="col-12 col-md-5 text-center mx-auto form-container">a
+                <div className="col-12 col-md-5 text-center mx-auto form-container">
                     <form className="form-inline subscribe-form justify-content-between flex-nowrap py-1">
                     <div className="form-group">
                         <input type="email" className="form-control footer-input" placeholder="Enter your email" />
