@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Navbar = () => {
+const Header = () => {
     return (
-      <div className="navbar nav">
+      <nav className="navbar nav nav-secondary">
         <div className="container">
             <div className="row">
                 <div className="col-12">
@@ -12,9 +12,9 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-    </div>
+      </nav>
 
     )
 }
 
-export default Navbar
+export default Header

@@ -53,7 +53,7 @@ router.get('/:user_id', async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error')
-    }
+     }
 })
 
 module.exports = router;

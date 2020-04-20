@@ -12,7 +12,7 @@ const Landing = () => {
                 <div className="row">
                     <div className="col-sm-12 col-md-6">
                     <h1 className="header-slogan text-white">
-                        <span className="text-bold">Brainstorming</span>
+                        <span className="text-bold">Brainstorming </span>
                         for desired perfect Usability</h1>
                     <p className="description text-white">
                         Our design projects are fresh and simple and will benefit your business greatly. Learn more
@@ -109,7 +109,7 @@ const Landing = () => {
                         <p className="pricing-packges-item-description text-black-50">Lorem ipsum dolor sit amet consectetur
                         adipisicing elit. Recusandae odit sint hic! Natus porro sequi nostrum, cum ratione illo
                         inventore...</p>
-                        <a href="!#" className="btn btn-purchase" rel="noreferrer noopener">Purchase now</a>
+                        <a href="!#" className="btn btn-main" rel="noreferrer noopener">Purchase now</a>
                     </div>
                     </div>
                     <div className="col-12 col-md-4">
@@ -120,7 +120,7 @@ const Landing = () => {
                         <p className="pricing-packges-item-description text-black-50">Lorem ipsum dolor sit amet consectetur
                         adipisicing elit. Recusandae odit sint hic! Natus porro sequi nostrum, cum ratione illo
                         inventore...</p>
-                        <a href="!#" className="btn btn-purchase" rel="noreferrer noopener">Purchase now</a>
+                        <a href="!#" className="btn btn-main" rel="noreferrer noopener">Purchase now</a>
                     </div>
                     </div>
                     <div className="col-12 col-md-4">
@@ -131,7 +131,7 @@ const Landing = () => {
                         <p className="pricing-packges-item-description text-black-50">Lorem ipsum dolor sit amet consectetur
                         adipisicing elit. Recusandae odit sint hic! Natus porro sequi nostrum, cum ratione illo
                         inventore...</p>
-                        <a href="!#" className="btn btn-purchase" rel="noreferrer noopener">Purchase now</a>
+                        <a href="!#" className="btn btn-main" rel="noreferrer noopener">Purchase now</a>
                     </div>
                     </div>
                 </div>

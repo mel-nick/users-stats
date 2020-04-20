@@ -3,14 +3,14 @@ import React, {Fragment} from 'react'
 const Pagination = ({usersPerPage, totalUsers, paginate, currentPage}) => {
     
     const pageNumbers =[];
-    const offset = 5
+    const offset = 1
     for (let i = 1; i <= Math.ceil(totalUsers / usersPerPage); i++) {
         pageNumbers.push(i);
     }
        
-    const currentPageNumbers =  currentPage > pageNumbers.length-offset ? pageNumbers.slice(pageNumbers.length-10, pageNumbers.length)
-                                : currentPage > 5 ? pageNumbers.slice(currentPage-offset, currentPage+offset) 
-                                : pageNumbers.slice(0, 12)
+    const currentPageNumbers =  currentPage > pageNumbers.length-offset ? pageNumbers.slice(pageNumbers.length-2, pageNumbers.length)
+                                : currentPage > 2 ? pageNumbers.slice(currentPage-offset, currentPage+offset) 
+                                : pageNumbers.slice(0, 3)
     return (
             <nav className="nav-pagination">
                 <ul className="pagination">
@@ -22,7 +22,7 @@ const Pagination = ({usersPerPage, totalUsers, paginate, currentPage}) => {
                         <i className="fas fa-angle-left"></i>
                     </a>
                     </li>
-                    {currentPage > offset && (
+                    {currentPage > offset+1 && (
                         <Fragment>
                             <li className={`page-item fff${currentPage===pageNumbers[0] ? 'active':''}`}>
                                 <a onClick = { (e) => {

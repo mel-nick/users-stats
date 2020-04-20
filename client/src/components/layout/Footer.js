@@ -11,15 +11,15 @@ const Footer = () => {
                     <div className="form-group">
                         <input type="email" className="form-control footer-input" placeholder="Enter your email" />
                     </div>
-                    <button type="button" className="btn btn-purchase btn-lg mr-1 text-white">Subscribe</button>
+                    <button type="button" className="btn btn-main btn-lg mr-1 text-white">Subscribe</button>
                     </form>
                 </div>
-                <div className="col-12 footer-info d-flex justify-content-between flex-nowrap">
+                <div className="col-12 footer-info d-flex justify-content-between flex-nowrap align-items-center">
                     <div className="footer-logo">
                     <Link className="navbar-brand navbar-logo-link" to="/">StatsApp</Link>
                     </div>
-                    <div className="footer-copyright tex">
-                    <p className="text-white"> Copyright © 2020</p>
+                    <div className="footer-copyright-text">
+                    <p className="text-white m-0"> Copyright © 2020</p>
                     </div>
                 </div>
                 </div>
