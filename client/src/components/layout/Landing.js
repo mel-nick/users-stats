@@ -32,7 +32,7 @@ const Landing = () => {
                 <div className="container">
                 <div className="row">
                     <div className="section-header col-12 col-md-5 text-center mx-auto">
-                    <h4>Why <span className="text-bold">small business owners love</span> StatsApp?</h4>
+                    <h4>Why <span className="text-bold">small business owners love</span> UStats?</h4>
                     </div>
                 </div>
                 <div className="row">

@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <Link className="navbar-brand navbar-logo-link" to="/" >StatsApp</Link>
+                    <Link className="navbar-brand navbar-logo-link" to="/" >UStats</Link>
                 </div>
             </div>
         </div>
