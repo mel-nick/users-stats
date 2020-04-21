@@ -18,8 +18,7 @@ const Pagination = ({usersPerPage, totalUsers, paginate, currentPage}) => {
                     <a onClick={ (e)=>{
                         e.preventDefault()
                         paginate(currentPage-1)
-                        }} href="!#" className="page-link">
-                        <i className="fas fa-angle-left"></i>
+                        }} href="!#" className="page-link">&lt;
                     </a>
                     </li>
                     {currentPage > offset+1 && (
@@ -65,7 +64,7 @@ const Pagination = ({usersPerPage, totalUsers, paginate, currentPage}) => {
                         paginate(currentPage+1)
 
                         }} href="!#" className="page-link">
-                        <i className="fas fa-angle-right"></i>
+                        &gt;
                     </a>
                     </li>
                 </ul>

@@ -329,15 +329,14 @@ input[type=email] {
 }
 
 /* 404 */
-.not-found{
-  display: flex;
+.not-found, .tb-page{
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
-    height: 100vh;
 }
 
-/* chart */
-/* .chart-row{
+/* chart */ 
+ .chart-row{
   border-top: none !important;
-} */
+}
