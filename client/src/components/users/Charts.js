@@ -110,18 +110,18 @@ function GraphPage({match}) {
                                     <tbody>
                                         <tr>
                                             <td className="chart-row"> 
-                                            <LineChart 
-                                                id={'views'}
-                                                width={1140}
-                                                height={400}
-                                                data={chartDataViews}
-                                                isDate={true}
-                                                xLabel={''}
-                                                yLabel={''} 
-                                                hidePoints={true}
-                                                yMin={'0'}
-                                                ticks={userClicks.length}
-                                            />
+                                                <LineChart 
+                                                    id={'views'}
+                                                    width={1140}
+                                                    height={400}
+                                                    data={chartDataViews}
+                                                    isDate={true}
+                                                    xLabel={''}
+                                                    yLabel={''} 
+                                                    hidePoints={true}
+                                                    yMin={'0'}
+                                                    ticks={userViews.length}
+                                                />
                                             </td>
                                         </tr>
                                     </tbody>
