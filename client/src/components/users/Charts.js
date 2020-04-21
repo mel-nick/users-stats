@@ -120,6 +120,7 @@ function GraphPage({match}) {
                                                 yLabel={''} 
                                                 hidePoints={true}
                                                 yMin={'0'}
+                                                ticks={userClicks.length}
                                             />
                                             </td>
                                         </tr>
