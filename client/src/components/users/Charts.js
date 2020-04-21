@@ -94,8 +94,7 @@ function GraphPage({match}) {
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                               
+                            </div>                               
                             </Fragment>                    
                         </div>
                     </div>
@@ -110,22 +109,23 @@ function GraphPage({match}) {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                        <td className="chart-row"> <LineChart 
-                                    id={'views'}
-                                    width={1140}
-                                    height={400}
-                                    data={chartDataViews}
-                                    isDate={true}
-                                    xLabel={''}
-                                    yLabel={''} 
-                                    hidePoints={true}
-                                    yMin={'0'}
-                                    /></td>
+                                            <td className="chart-row"> 
+                                            <LineChart 
+                                                id={'views'}
+                                                width={1140}
+                                                height={400}
+                                                data={chartDataViews}
+                                                isDate={true}
+                                                xLabel={''}
+                                                yLabel={''} 
+                                                hidePoints={true}
+                                                yMin={'0'}
+                                            />
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                                
+                            </div>                                
                             </Fragment>
                         </div>
                     </div>
