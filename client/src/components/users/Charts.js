@@ -13,25 +13,23 @@ function GraphPage({match}) {
 
     const [user, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [userViews, SetUserViews] = useState([])
-    const [userClicks, SetClicksData] = useState([])
+    const [userViews, SetViews] = useState([])
+    const [userClicks, SetClicks] = useState([])
 
     useEffect(() => {
         axios.get(`/api/users/${match.params.user_id}`)
         .then(res =>{
             const data = res.data
             setData(data);
-            SetUserViews(data.dateViews);
-            SetClicksData(data.dateClicks);
-            setLoading(false);            
+            SetViews(data.dateViews);
+            SetClicks(data.dateClicks);
+            setLoading(false);
         })
         .catch(err => console.error(err))      
-    }, [setData, setLoading, match.params.user_id, SetClicksData, SetUserViews]);
+    }, [setData, setLoading, match.params.user_id, SetClicks, SetViews]);
 
 
-    
-
-   //Charts
+  //Charts
     const chartDataClicks = [
         {									
             color: "red", 
@@ -74,7 +72,14 @@ function GraphPage({match}) {
                         <div className="col-12 mb-5">
                             <Fragment>
                             <h6 className="chart-name text-bold mt-5">Clicks</h6>
-                                <LineChart 
+                            <button onClick={()=>{SetClicks(user.dateClicks.slice(0,7))}} className="btn btn-main m-2">1 week</button>
+                            <button onClick={()=>{SetClicks(user.dateClicks.slice(0,14))}} className="btn btn-main m-2">2 weeks</button>
+                            <button onClick={()=>SetClicks(user.dateClicks)} className="btn btn-main m-2">1 month</button>
+                            <div className="table-responsive-lg">
+                                <table className="table">
+                                    <tbody>
+                                        <tr>
+                                        <td className="chart-row"> <LineChart 
                                     id={'clicks'}
                                     width={1140}
                                     height={400}
@@ -84,8 +89,13 @@ function GraphPage({match}) {
                                     yLabel={''}
                                     hidePoints={true}
                                     yMin={'0'}
-                                    ticks={5}
-                                    />
+                                    ticks={userClicks.length}
+                                    /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                               
                             </Fragment>                    
                         </div>
                     </div>
@@ -93,7 +103,14 @@ function GraphPage({match}) {
                         <div className="col-12">
                         <Fragment>
                             <h6 className="chart-name text-bold">Viwes</h6>
-                                <LineChart 
+                            <button onClick={()=>{SetViews(user.dateViews.slice(0,7))}} className="btn btn-main m-2">1 week</button>
+                            <button onClick={()=>{SetViews(user.dateViews.slice(0,14))}} className="btn btn-main m-2">2 weeks</button>
+                            <button onClick={()=>SetViews(user.dateViews)} className="btn btn-main m-2">1 month</button>
+                            <div className="table-responsive-lg">
+                                <table className="table">
+                                    <tbody>
+                                        <tr>
+                                        <td className="chart-row"> <LineChart 
                                     id={'views'}
                                     width={1140}
                                     height={400}
@@ -103,7 +120,12 @@ function GraphPage({match}) {
                                     yLabel={''} 
                                     hidePoints={true}
                                     yMin={'0'}
-                                    />
+                                    /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                                
                             </Fragment>
                         </div>
                     </div>
