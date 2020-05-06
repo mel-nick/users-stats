@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container">                
                 <div className="col-12 footer-info d-flex justify-content-between flex-nowrap align-items-center">
                     <div className="footer-logo">
-                    <Link className="navbar-brand navbar-logo-link" to="/">StatsApp</Link>
+                    <Link className="navbar-brand navbar-logo-link" to="/">UStats</Link>
                     </div>
                     <div className="footer-copyright-text">
                     <p className="text-white m-0"> Copyright © 2020</p>
