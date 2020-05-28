@@ -28,10 +28,6 @@
 
 /* header */
 
-.header {
-  background: url("./img/svg/header_bg.svg") no-repeat center center;
-  background-size: cover;
-}
 
 .header-slogan {
   margin-top: 30px;
@@ -85,11 +81,6 @@
   font-size: 48px;
 }
 
-.pricing-packges {
-  background: url("./img/svg/packages_bg.svg") right center no-repeat;
-  padding: 30px 0;
-}
-
 .packges-item-price::after {
   content: '';
   border: .7px solid #e9e2e2;
@@ -116,13 +107,13 @@
 
 /* footer */
 
-.footer {
+/* .footer {
   background: url("./img/svg/footer_bg.svg") no-repeat center center;
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 20px;
   position: relative;
-}
+} */
 .form-container{
   position: absolute;
   top: 50px;

@@ -2,11 +2,23 @@ import React, {Fragment} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import headerBgSvg from '../../img/svg/header_bg.svg'
+import pricingPackgeBgSvg from '../../img/svg/packages_bg.svg'
 
 const Landing = () => {
+
+    const headerStyles = {
+        background: `url(${headerBgSvg}) no-repeat center center`,
+        backgroundSize: 'cover'
+    }
+    const pricingPackgesStyles = {
+        background: `url(${pricingPackgeBgSvg}) right center no-repeat`,
+        padding: '30px 0'
+    }
+ 
     return (
         <Fragment>
-            <header className="header">
+            <header className="header" style={headerStyles}>
                 <Navbar/>
                 <div className="container">
                 <div className="row">
@@ -87,7 +99,7 @@ const Landing = () => {
                 </div>
                 </div>
             </section>
-            <section className="pricing-packges">
+            <section className="pricing-packges" style={pricingPackgesStyles}>
                 <div className="container">
                 <div className="row">
                     <div className="section-header col-12 col-md-7 text-center mx-auto mt-5">

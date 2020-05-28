@@ -1,9 +1,19 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
+import footerBgSvg from '../../img/svg/footer_bg.svg'
 
 const Footer = () => {
+
+    const footerStyles = {
+        background: `url(${footerBgSvg}) no-repeat center center`,
+        backgroundSize: 'cover',
+        paddingTop: '100px',
+        paddingBottom: '20px',
+        position: 'relative'
+      }
+      
     return (
-        <footer className="footer">
+        <footer className="footer" style={footerStyles}>
             <div className="container">
                 <div className="row">
                 <div className="col-12 col-md-5 text-center mx-auto form-container">
